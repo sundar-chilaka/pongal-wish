@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pongal Wishes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6e1a8; /* Light yellow background */
+            background-image: url('https://wallpapers.com/images/high/happy-pongal-palm-leaves-yq586d9h0kksqeg5.webp');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 0;
+            color: #ff6f00;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ffd700;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 80%;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive video styling */
+        video {
+            width: 200px; /* Full width of the container */
+            height: 100px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Video is behind the text */
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .btn {
+            background-color: #ff6f00;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #ff8c1a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Happy Pongal!</h1>
+    <p>Wishing you a prosperous harvest and a joyful festival!</p>
+
+    <div class="container">
+        <!-- Embed video from the Spring Boot API endpoint -->
+        <video autoplay loop controls>
+            <source src="videos/pongal.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="footer">
+        <p>Celebrate the season of abundance and happiness!</p>
+    </div>
+
+    <script>
+        // Optional: If you want to auto-play the video when the page loads
+        const video = document.querySelector('video');
+        
+        // Ensures video and audio play once the page loads
+        video.play().catch(error => {
+            console.log('Video autoplay failed', error);
+        });
+    </script>
+
+</body>
+</html>
